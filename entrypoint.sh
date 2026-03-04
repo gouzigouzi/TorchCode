@@ -29,4 +29,7 @@ exec jupyter lab \
     --allow-root \
     --NotebookApp.token='' \
     --NotebookApp.password='' \
+    --ServerApp.tornado_settings='{"headers": {"Content-Security-Policy": "frame-ancestors *"}}' \
+    --ServerApp.allow_origin='*' \
+    --ServerApp.disable_check_xsrf=True \
     --notebook-dir="$NOTEBOOKS_DIR"
